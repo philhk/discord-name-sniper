@@ -24,7 +24,7 @@ export class WebhookSniper {
     name,
     responseBody,
     statusCode,
-    pingRoleId: pingRole,
+    pingRoleId,
   }: {
     id: bigint | string;
     name: string;
@@ -40,10 +40,7 @@ export class WebhookSniper {
           name: 'Response Body',
           value: '```' + JSON.stringify(responseBody, null, 2) + '```',
         },
-        { name: 'Status Code', value: `${statusCode}` },
-        ...(pingRole
-          ? [{ name: 'Ping', value: `<@&${pingRole}>`, inline: true }]
-          : [])
+        { name: 'Status Code', value: `${statusCode}` }
       )
       .setTimestamp(Date.now())
       .setColor('Green');
@@ -52,6 +49,7 @@ export class WebhookSniper {
       avatarURL: this.avatarUrl,
       username: this.username,
       embeds: [embed],
+      ...(pingRoleId ? { content: `<@&${pingRoleId}>` } : {}),
     });
   }
 
