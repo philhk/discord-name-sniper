@@ -33,7 +33,7 @@
     "namelists": {
        // Example:
        "mynames": ["iwannasnipethisname", "andthisonetoo"],
-       "mynamestwo": ["phil", "notphil"],
+       "mynamestwo": ["phil", "notphil"]
     },
     "accounts": [
         // Example:
@@ -51,7 +51,7 @@
         "nameRetry": 10
     },
     "webhook": {
-        "enabled" false,
+        "enabled": false,
         "url": "",
         "pingRoleId": "",
         "sendFailures": false
