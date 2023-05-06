@@ -34,7 +34,7 @@
        // Example:
        "mynames": ["iwannasnipethisname", "andthisonetoo"],
        "mynamestwo": ["phil", "notphil"],
-    }
+    },
     "accounts": [
         // Example:
         {
@@ -45,13 +45,13 @@
             "token": "********.***.**************",
             "namelists": ["mynamestwo"]
         },
-    ]
+    ],
     "delays": {
         "retry": 300,
         "nameRetry": 10
     },
     "webhook": {
-        "enabled" false
+        "enabled" false,
         "url": "",
         "pingRoleId": "",
         "sendFailures": false
