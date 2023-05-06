@@ -59,7 +59,11 @@
 }
 ```
 
-### How to use
+### How to use?
+
+- Download the latest [release](https://github.com/philhk/discord-name-sniper/releases/) and run it. (Windows only)
+
+### Build
 
 - Download and install [NodeJS](https://nodejs.org/en/download) if you haven't already
 - Download the repository as a ZIP and extract it somewhere
