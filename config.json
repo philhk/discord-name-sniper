@@ -2,13 +2,13 @@
   "namelists": {},
   "accounts": [],
   "delays": {
-    "retry": 300,
-    "nameRetry": 10
+    "nameRetry": 10,
+    "retry": 300
   },
   "webhook": {
     "enabled": false,
-    "url": "",
+    "sendFailures": false,
     "pingRoleId": "",
-    "sendFailures": false
+    "url": ""
   }
 }

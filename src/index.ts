@@ -1,8 +1,20 @@
 import { postPomelo } from './api';
 import { sleep, tokenToId } from './utils';
-import { Account, config } from './config';
+import {
+  Account,
+  Config,
+  readParseConfig,
+  writeConfigTemplate,
+} from './config';
 import { WebhookSniper } from './webhook';
 import { logger } from './logger';
+
+export const config: Config =
+  readParseConfig() ?? writeConfigTemplate() ?? readParseConfig();
+
+if (!config.accounts.length) {
+  logger.warn(`You have not added any accounts. Was that a mistake?`);
+}
 
 const { accounts, delays, namelists, webhook } = config;
 const { enabled, url, pingRoleId, sendFailures } = webhook;

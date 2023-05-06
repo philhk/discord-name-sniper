@@ -1,4 +1,4 @@
-import * as config_ from '../config.json';
+import { readFileSync, writeFileSync } from 'fs';
 
 export interface Account {
   token: string;
@@ -23,4 +23,26 @@ export interface Config {
   };
 }
 
-export const config = config_ as any as Config;
+export const defaultConfig: Config = {
+  namelists: {},
+  accounts: [],
+  delays: {
+    nameRetry: 10,
+    retry: 300,
+  },
+  webhook: {
+    enabled: false,
+    sendFailures: false,
+    pingRoleId: '',
+    url: '',
+  },
+};
+
+export const writeConfigTemplate = () =>
+  writeFileSync('config.json', JSON.stringify(defaultConfig, null, 2));
+
+export const readParseConfig = () => {
+  try {
+    return JSON.parse(readFileSync('config.json', 'utf8'));
+  } catch (_) {}
+};
