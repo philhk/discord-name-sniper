@@ -44,7 +44,7 @@
         {
             "token": "********.***.**************",
             "namelists": ["mynamestwo"]
-        },
+        }
     ],
     "delays": {
         "retry": 300,
