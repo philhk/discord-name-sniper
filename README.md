@@ -15,8 +15,8 @@
 
 ### Config
 
-- `namelists` - Object containing lists of names. Example: `"mynames": ["iwannasnipethisname", "andthisonetoo"]`. The order is important in this case `iwannasnipethisname` has the highest priority in this list.
-- `accounts` - Array containing objects with a token and name list names. Example: `{ "token": "********.***.**************", "namelists": ["mynames"] }`. The same rules as before apply to the order of the lists of names.
+- `namelists` - Object containing lists of names. The order is important in the case of example config `iwannasnipethisname` has the highest priority in this list.
+- `accounts` - Array containing objects with a token and name list names. The same rules as before apply to the order of the lists of names.
 - `delays`
   - `retry` - Number of seconds to wait before trying again if you are still not eligible for the name change.
   - `nameRetry` - Number of seconds to wait before trying the next name in the list if you are eligible for the name change.
@@ -33,8 +33,8 @@
     "namelists": {
        // Example:
        "mynames": ["iwannasnipethisname", "andthisonetoo"],
-       "mynamestwo": ["phil", "notphil"],
-    }
+       "mynamestwo": ["phil", "notphil"]
+    },
     "accounts": [
         // Example:
         {
@@ -44,14 +44,14 @@
         {
             "token": "********.***.**************",
             "namelists": ["mynamestwo"]
-        },
-    ]
+        }
+    ],
     "delays": {
         "retry": 300,
         "nameRetry": 10
     },
     "webhook": {
-        "enabled" false
+        "enabled": false,
         "url": "",
         "pingRoleId": "",
         "sendFailures": false
