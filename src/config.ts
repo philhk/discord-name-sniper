@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from 'fs';
+import { logger } from './logger';
 
 export interface Account {
   token: string;
@@ -44,5 +45,7 @@ export const writeConfigTemplate = () =>
 export const readParseConfig = () => {
   try {
     return JSON.parse(readFileSync('config.json', 'utf8'));
-  } catch (_) {}
+  } catch (error) {
+    logger.error(error);
+  }
 };

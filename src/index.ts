@@ -8,9 +8,11 @@ import {
 } from './config';
 import { WebhookSniper } from './webhook';
 import { logger } from './logger';
+import { existsSync } from 'fs';
 
-export const config: Config =
-  readParseConfig() ?? writeConfigTemplate() ?? readParseConfig();
+if (!existsSync('config.json')) writeConfigTemplate();
+
+export const config: Config = readParseConfig();
 
 if (!config.accounts.length) {
   logger.warn(`You have not added any accounts. Was that a mistake?`);
