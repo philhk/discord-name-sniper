@@ -1,12 +1,12 @@
 # Discord Name Sniper
 
-# Very Important!
-
-> My Discord account has just been deactivated. I don't know why. It has probably to do with the little delay I set. I wouldn't use this software right now, but if you really want to, set a one-hour delay just to be safe.
+> Please consider leaving a ⭐ on the repository to support me.
 
 ---
 
-> Please consider leaving a ⭐ on the repository to support me.
+### Very Important!
+
+> My Discord account was just deactivated due to suspicious activity and I reactivated it. I do not know why. It probably has to do with the low delay I set. At this point, I wouldn't use this software with a small delay, but set a delay of one hour just to be safe.
 
 ### Why?
 
