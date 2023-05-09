@@ -11,7 +11,7 @@
 - Multiple tokens
 - List of names to be sniped for each token
 - Customizeable delays
-- Webhook
+- Webhook support
 
 ### Responses
 
@@ -84,6 +84,9 @@
 ```
 # Install dependencies
 npm install
+
+# (Optional) Create an executable file
+npm run build
 
 # Start the program
 npm run start
