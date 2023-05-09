@@ -18,8 +18,8 @@ if (!config.accounts.length) {
   logger.warn(`You have not added any accounts. Was that a mistake?`);
 }
 
-const { accounts, delays, namelists, webhook } = config;
-const { enabled, url, pingRoleId, sendFailures } = webhook;
+const { accounts, delays, namelists, webhook: webhookConfig } = config;
+const { enabled, url, pingRoleId, sendFailures } = webhookConfig;
 
 const parsedAccounts = accounts.map(
   (account): Account => ({
@@ -32,7 +32,7 @@ const parsedAccounts = accounts.map(
   })
 );
 
-const webhookSniper =
+const webhook =
   enabled && url
     ? new WebhookSniper({
         url,
@@ -43,17 +43,21 @@ const attemptAccount = async (account: Account): Promise<boolean> => {
   const { names, token } = account;
 
   for (const name of names) {
-    const res = await postPomelo(token, names[0]);
+    const res = await postPomelo(token, name);
 
     logger.info(
-      `Tried renaming '${token}' to '${name}' with response ${JSON.stringify(
-        res.data
-      )} ${res.status}`
+      res.status === 200
+        ? `Successfully sniped username '${name}' for '${token}' ${JSON.stringify(
+            res.data
+          )} ${res.status}`
+        : `Failed to snipe username '${name}' for '${token}' ${JSON.stringify(
+            res.data
+          )} ${res.status}`
     );
 
-    if (webhookSniper) {
+    if (webhook)
       if (sendFailures || res.status === 200)
-        webhookSniper[
+        webhook[
           res.status === 200 ? 'sendSuccessfulSnipe' : 'sendFailureSnipe'
         ]({
           id: tokenToId(token),
@@ -62,7 +66,6 @@ const attemptAccount = async (account: Account): Promise<boolean> => {
           statusCode: res.status,
           pingRoleId: pingRoleId,
         });
-    }
 
     if (res.data.message === 'Unauthorized') return false;
     if (res.status === 200) return true;

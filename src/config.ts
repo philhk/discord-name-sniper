@@ -42,10 +42,5 @@ export const defaultConfig: Config = {
 export const writeConfigTemplate = () =>
   writeFileSync('config.json', JSON.stringify(defaultConfig, null, 2));
 
-export const readParseConfig = () => {
-  try {
-    return JSON.parse(readFileSync('config.json', 'utf8'));
-  } catch (error) {
-    logger.error(error);
-  }
-};
+export const readParseConfig = () =>
+  JSON.parse(readFileSync('config.json', 'utf8'));

@@ -13,6 +13,17 @@
 - Customizeable delays
 - Webhook
 
+### Responses
+
+> Important! These responses are just assumptions because there weren't any other than 401 since nobody could rename themselves yet.
+
+| Status | Description                                      |
+| ------ | ------------------------------------------------ |
+| 200    | Successfuly sniped a name                        |
+| 400    | The name is already taken                        |
+| 401    | You are not yet authorized to change your name   |
+| 429    | You make too many requests. Increase your delays |
+
 ### Config
 
 - `namelists` - Object containing lists of names. The order is important in the case of example config `iwannasnipethisname` has the highest priority in this list.
