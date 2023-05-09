@@ -2,6 +2,10 @@
 
 > Please consider leaving a ⭐ on the repository to support me.
 
+# Very Important!
+
+My Discord account has just been deactivated. I don't know why. It has probably to do with the little delay I set. I wouldn't use this software right now, but if you really want to, set a one-hour delay just to be safe.
+
 ### Why?
 
 > Discord just announced that they are moving to a new naming system. The new naming system removes the discriminators which means there will only be unique names. For a full understanding visit this Discord [article](https://support.discord.com/hc/en-us/articles/12620128861463-New-Usernames-Display-Names). But most importantly all discord users have to change their name. The older the account, the sooner you will be able to change your name, as stated in the article.
