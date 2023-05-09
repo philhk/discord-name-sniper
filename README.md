@@ -15,7 +15,7 @@ My Discord account has just been deactivated. I don't know why. It has probably 
 - Multiple tokens
 - List of names to be sniped for each token
 - Customizeable delays
-- Webhook
+- Webhook support
 
 ### Responses
 
@@ -23,7 +23,7 @@ My Discord account has just been deactivated. I don't know why. It has probably 
 
 | Status | Description                                      |
 | ------ | ------------------------------------------------ |
-| 200    | Successfuly sniped a name                        |
+| 200    | Successfully sniped a name                        |
 | 400    | The name is already taken                        |
 | 401    | You are not yet authorized to change your name   |
 | 429    | You make too many requests. Increase your delays |
@@ -88,6 +88,9 @@ My Discord account has just been deactivated. I don't know why. It has probably 
 ```
 # Install dependencies
 npm install
+
+# (Optional) Create an executable file
+npm run build
 
 # Start the program
 npm run start
