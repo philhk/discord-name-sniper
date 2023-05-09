@@ -28,8 +28,8 @@ export const defaultConfig: Config = {
   namelists: {},
   accounts: [],
   delays: {
-    nameRetry: 10,
-    retry: 300,
+    nameRetry: 300,
+    retry: 3600,
   },
   webhook: {
     enabled: false,

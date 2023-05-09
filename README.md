@@ -1,10 +1,12 @@
 # Discord Name Sniper
 
-> Please consider leaving a ⭐ on the repository to support me.
-
 # Very Important!
 
-My Discord account has just been deactivated. I don't know why. It has probably to do with the little delay I set. I wouldn't use this software right now, but if you really want to, set a one-hour delay just to be safe.
+> My Discord account has just been deactivated. I don't know why. It has probably to do with the little delay I set. I wouldn't use this software right now, but if you really want to, set a one-hour delay just to be safe.
+
+---
+
+> Please consider leaving a ⭐ on the repository to support me.
 
 ### Why?
 
@@ -23,7 +25,7 @@ My Discord account has just been deactivated. I don't know why. It has probably 
 
 | Status | Description                                      |
 | ------ | ------------------------------------------------ |
-| 200    | Successfully sniped a name                        |
+| 200    | Successfully sniped a name                       |
 | 400    | The name is already taken                        |
 | 401    | You are not yet authorized to change your name   |
 | 429    | You make too many requests. Increase your delays |
