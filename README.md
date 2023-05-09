@@ -19,7 +19,7 @@
 
 | Status | Description                                      |
 | ------ | ------------------------------------------------ |
-| 200    | Successfuly sniped a name                        |
+| 200    | Successfully sniped a name                        |
 | 400    | The name is already taken                        |
 | 401    | You are not yet authorized to change your name   |
 | 429    | You make too many requests. Increase your delays |
