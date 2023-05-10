@@ -85,3 +85,5 @@ for (const account of parsedAccounts) {
     }
   })();
 }
+
+setInterval(() => void 0, 60 * 60 * 1000);
