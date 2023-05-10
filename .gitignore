@@ -1,4 +1,6 @@
 node_modules
 dist
 
+config.json
+
 yarn-error.log

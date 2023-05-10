@@ -10,12 +10,17 @@ import { WebhookSniper } from './webhook';
 import { logger } from './logger';
 import { existsSync } from 'fs';
 
-if (!existsSync('config.json')) writeConfigTemplate();
+if (!existsSync('config.json')) {
+  logger.info('Successfully created config.json file.');
+  writeConfigTemplate();
+}
 
 export const config: Config = readParseConfig();
 
 if (!config.accounts.length) {
-  logger.warn(`You have not added any accounts. Was that a mistake?`);
+  logger.warn(
+    `You have not added any accounts to your config. Was that a mistake?`
+  );
 }
 
 const { accounts, delays, namelists, webhook: webhookConfig } = config;
